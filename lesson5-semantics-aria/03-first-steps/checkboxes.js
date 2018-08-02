@@ -37,10 +37,16 @@
     if (this.el.hasAttribute('checked')) {
       this.el.removeAttribute('checked');
 
-      // Hmm.
+      if (this.el.getAttribute('aria-checked') === "true") {
+        this.el.setAttribute('aria-checked', "false")
+      }
 
-    } else {
+    } 
+    
+
+    else {
       this.el.setAttribute('checked', '');
+      this.el.setAttribute('aria-checked', "true");
 
       // Hmmmmm.
 
