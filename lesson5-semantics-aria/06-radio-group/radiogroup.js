@@ -34,7 +34,7 @@
         button.tabIndex = "-1";
       }
 
-      // What about here?
+      
     }
 
   }
@@ -92,6 +92,7 @@
     // Set the old button to tabindex -1
     this.focusedButton.tabIndex = -1;
     this.focusedButton.removeAttribute('checked');
+    this.focusedButton.setAttribute('aria-checked', 'false')
 
     // Set the new button to tabindex 0 and focus it
     this.focusedButton = this.buttons[this.focusedIdx];
@@ -99,7 +100,7 @@
     this.focusedButton.focus();
     this.focusedButton.setAttribute('checked', '');
 
-    // ... we probably want to do some stuff here, too ...
+    this.focusedButton.setAttribute('aria-checked', 'true')
 
   };
 
