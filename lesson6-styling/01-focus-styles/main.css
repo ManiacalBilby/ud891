@@ -16,7 +16,11 @@ a:focus {
   margin: 0 8px;
 }
 
-.nav > li > a:focus {
+.nav > li > a:focus,
+.nav > li > a:hover {
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
   text-decoration: none;
   background: transparent;
 }
@@ -24,6 +28,15 @@ a:focus {
 .jumbotron .mdl-button {
   background-color: #008b00;
   color: #FFFFFF;
+}
+
+.mdl-button:hover,
+.mdl-button:focus,
+.mdl-button.raised:hover,
+.mdl-button.raised:focus {
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.75);
 }
 
 .mdl-button.raised {
